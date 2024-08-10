@@ -58,6 +58,7 @@ export const FigmaEmbed = Node.create({
     };
   },
 
+  // biome-ignore lint/style/useNamingConvention: "This is a TipTap extension property"
   parseHTML() {
     return [
       {
@@ -66,6 +67,7 @@ export const FigmaEmbed = Node.create({
     ];
   },
 
+  // biome-ignore lint/style/useNamingConvention: "This is a TipTap extension property"
   renderHTML({ HTMLAttributes }) {
     return [
       'iframe',
@@ -109,6 +111,8 @@ export const FigmaEmbed = Node.create({
             }
             return false;
           },
+
+          // biome-ignore lint/style/useNamingConvention: "This is a TipTap extension property"
           handleDOMEvents: {
             drop: (view, event) => {
               const text = event.dataTransfer?.getData('text/plain');
