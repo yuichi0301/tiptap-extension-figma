@@ -1,6 +1,10 @@
 # tiptap-extension-figma
 
-A [Tiptap](https://tiptap.dev/) extension for hydrating Figma designs in a TipTap document.
+[![Version](https://img.shields.io/npm/v/tiptap-extension-figma.svg)](https://www.npmjs.org/package/tiptap-extension-figma) [![Build Status](https://github.com/haydenbleasel/tiptap-extension-figma/actions/workflows/push.yml/badge.svg?branch=main)](https://github.com/haydenbleasel/tiptap-extension-figma/actions?query=branch%3Amain)
+
+![tiptap-extension-figma](/sample.png)
+
+A [Tiptap](https://tiptap.dev/) extension for hydrating Figma designs in a TipTap document. It uses Figma's [Live Embed Kit](https://www.figma.com/developers/embed) to take matching URLs and render them in the editor as an iframe.
 
 ## Installation
 
@@ -16,4 +20,16 @@ import { Figma } from 'tiptap-extension-figma';
 const editor = new Editor({
   extensions: [Figma],
 });
+```
+
+I also recommend adding the following Tailwind CSS to your project:
+
+```css
+.ProseMirror iframe[src*="figma.com"] {
+  @apply w-full aspect-[4/3] shadow-sm my-8 rounded-md overflow-hidden;
+}
+
+.ProseMirror iframe[src*="figma.com"].ProseMirror-selectednode {
+  @apply ring ring-primary;
+}
 ```
