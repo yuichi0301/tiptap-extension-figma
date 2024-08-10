@@ -11,9 +11,9 @@ pnpm add tiptap-extension-figma
 ## Usage
 
 ```ts
-import { FigmaExtension } from 'tiptap-extension-figma';
+import { Figma } from 'tiptap-extension-figma';
 
 const editor = new Editor({
-  extensions: [FigmaExtension],
+  extensions: [Figma],
 });
 ```

@@ -23,7 +23,7 @@ const createEmbedSrc = (url: string) => {
   return embedUrl.toString();
 };
 
-export const FigmaEmbed = Node.create({
+export const Figma = Node.create({
   name: 'figma',
   group: 'block',
   atom: true,
