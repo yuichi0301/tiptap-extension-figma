@@ -1,6 +1,6 @@
 # tiptap-extension-figma
 
-A [TipTap](https://tiptap.dev/) extension for hydrating Figma designs in a TipTap document.
+A [Tiptap](https://tiptap.dev/) extension for hydrating Figma designs in a TipTap document.
 
 ## Installation
 
