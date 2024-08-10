@@ -1,6 +1,15 @@
 import { InputRule, Node, mergeAttributes } from '@tiptap/core';
 import { Plugin, PluginKey } from '@tiptap/pm/state';
 
+declare module '@tiptap/core' {
+  interface Commands<ReturnType> {
+    figma: {
+      setFigma: (options: { src: string }) => ReturnType;
+      unsetFigma: () => ReturnType;
+    };
+  }
+}
+
 const figmaRegex =
   /https:\/\/[\w\.-]+\.?figma.com\/([\w-]+)\/([0-9a-zA-Z]{22,128})(?:\/.*)?$/;
 
@@ -18,6 +27,28 @@ export const FigmaEmbed = Node.create({
   name: 'figma',
   group: 'block',
   atom: true,
+
+  addCommands() {
+    return {
+      setFigma:
+        (options) =>
+        ({ commands }) => {
+          return commands.insertContent({
+            type: this.name,
+            attrs: options,
+          });
+        },
+
+      unsetFigma:
+        () =>
+        ({ commands }) => {
+          return commands.deleteRange({
+            from: 0,
+            to: -1,
+          });
+        },
+    };
+  },
 
   addAttributes() {
     return {
@@ -53,10 +84,8 @@ export const FigmaEmbed = Node.create({
         handler: ({ match, commands }) => {
           const url = match[0];
           const embedSrc = createEmbedSrc(url);
-          commands.insertContent({
-            type: this.name,
-            attrs: { src: embedSrc },
-          });
+
+          commands.setFigma({ src: embedSrc });
         },
       }),
     ];
