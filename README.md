@@ -14,6 +14,8 @@ pnpm add tiptap-extension-figma
 
 ## Usage
 
+### Client
+
 ```ts
 import { Figma } from 'tiptap-extension-figma';
 
@@ -33,3 +35,17 @@ I also recommend adding the following Tailwind CSS to your project:
   @apply ring ring-primary;
 }
 ```
+
+### Server
+
+If you are running this in a headless environment, you can use the Server extension instead:
+
+```ts
+import { Figma } from 'tiptap-extension-figma/server';
+
+const editor = new Editor({
+  extensions: [Figma],
+});
+```
+
+This Node doesn't render anything in the editor, but it stop the Editor from crashing when it encounters a Node with the name `figma`.
