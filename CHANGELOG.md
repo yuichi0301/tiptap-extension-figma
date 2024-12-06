@@ -1,3 +1,26 @@
+# v1.0.6 (Fri Dec 06 2024)
+
+#### ⚠️ Pushed to `main`
+
+- Move tiptap deps to peer ([@haydenbleasel](https://github.com/haydenbleasel))
+- Bump deps ([@haydenbleasel](https://github.com/haydenbleasel))
+
+#### 🔩 Dependency Updates
+
+- Bump @tiptap/pm from 2.9.1 to 2.10.3 [#15](https://github.com/haydenbleasel/tiptap-extension-figma/pull/15) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump @types/node from 22.8.6 to 22.10.1 [#16](https://github.com/haydenbleasel/tiptap-extension-figma/pull/16) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump typescript from 5.6.3 to 5.7.2 [#17](https://github.com/haydenbleasel/tiptap-extension-figma/pull/17) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump @tiptap/core from 2.6.6 to 2.10.3 [#18](https://github.com/haydenbleasel/tiptap-extension-figma/pull/18) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump ultracite from 4.1.6 to 4.1.7 [#19](https://github.com/haydenbleasel/tiptap-extension-figma/pull/19) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+- Bump cross-spawn from 7.0.3 to 7.0.6 in the npm_and_yarn group [#20](https://github.com/haydenbleasel/tiptap-extension-figma/pull/20) ([@dependabot[bot]](https://github.com/dependabot[bot]))
+
+#### Authors: 2
+
+- [@dependabot[bot]](https://github.com/dependabot[bot])
+- Hayden Bleasel ([@haydenbleasel](https://github.com/haydenbleasel))
+
+---
+
 # v1.0.5 (Mon Dec 02 2024)
 
 #### ⚠️ Pushed to `main`
