@@ -1,8 +1,10 @@
 {
   "name": "tiptap-extension-figma",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A Tiptap extension for hydrating Figma links.",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "import": {
@@ -42,7 +44,11 @@
     "type": "git",
     "url": "git+https://github.com/haydenbleasel/tiptap-extension-figma.git"
   },
-  "keywords": ["figma", "tiptap", "extension"],
+  "keywords": [
+    "figma",
+    "tiptap",
+    "extension"
+  ],
   "author": "Hayden Bleasel <hello@haydenbleasel.com>",
   "license": "ISC",
   "bugs": {
