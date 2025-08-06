@@ -1,0 +1,1 @@
+import{Node as t,mergeAttributes as e}from"@tiptap/core";var i=t.create({name:"figma",group:"block",atom:!0,addAttributes(){return{src:{default:null}}},parseHTML(){return[{tag:'iframe[src*="figma.com"]'}]},renderHTML({HTMLAttributes:r}){return["iframe",e(this.options.HTMLAttributes,r,{width:"800",height:"450",allowfullscreen:"true"})]}});export{i as Figma};
